@@ -7,56 +7,113 @@
     <title>Website with General Menu</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
+            color: #333;
         }
+
         /* Style the navigation bar */
         nav {
-            background-color: #333;
-            padding: 10px 0;
+            background-color: #4CAF50;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
         }
+
         nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
+
         nav ul li {
-            margin: 0 20px;
+            margin: 0 15px;
         }
+
         nav ul li a {
+            display: inline-block;
+            padding: 15px 20px;
             color: white;
             text-decoration: none;
-            font-size: 16px;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
         }
+
         nav ul li a:hover {
-            text-decoration: underline;
+            background-color: #45a049;
+            border-radius: 5px;
         }
-        /* Style the main content */
+
+        /* Add some space from the top after the fixed nav */
         .content {
-            padding: 20px;
+            padding: 100px 20px;
             text-align: center;
         }
+
         h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
             color: #333;
         }
+
         p {
             font-size: 18px;
-            color: #666;
+            color: #555;
+            line-height: 1.6;
         }
+
+        /* Section styles */
+        #home {
+            background: url('https://source.unsplash.com/1600x900/?nature') no-repeat center center/cover;
+            color: white;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #about, #services, #contact, #blog {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+        }
+
         /* Footer styling */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 20px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            .content {
+                padding: 80px 20px;
+            }
         }
     </style>
 </head>
@@ -76,27 +133,27 @@
     <!-- Main Content -->
     <div class="content" id="home">
         <h1>Welcome to Our Website</h1>
-        <p>This is the home section. You can add more details about your business or website here.</p>
+        <p>This is the home section. Explore our website for more details.</p>
     </div>
 
     <div class="content" id="about">
         <h1>About Us</h1>
-        <p>We are a company dedicated to providing the best services to our customers.</p>
+        <p>We are a company dedicated to providing the best services to our customers. Our team is focused on innovation and excellence in everything we do.</p>
     </div>
 
     <div class="content" id="services">
         <h1>Our Services</h1>
-        <p>We offer a range of services to meet your needs, including web development, design, and consulting.</p>
+        <p>We offer a range of services to meet your needs, including web development, design, consulting, and more.</p>
     </div>
 
     <div class="content" id="contact">
         <h1>Contact Us</h1>
-        <p>If you have any questions, feel free to contact us via email or phone.</p>
+        <p>If you have any questions, feel free to contact us via email or phone. We are here to assist you!</p>
     </div>
 
     <div class="content" id="blog">
         <h1>Our Blog</h1>
-        <p>Check out our latest blog posts for updates and insights.</p>
+        <p>Check out our latest blog posts for insights and updates on industry trends, tips, and more.</p>
     </div>
 
     <!-- Footer -->
