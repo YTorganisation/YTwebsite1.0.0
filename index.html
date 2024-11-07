@@ -3,163 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Website with General Menu</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        /* Style the navigation bar */
-        nav {
-            background-color: #4CAF50;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            display: inline-block;
-            padding: 15px 20px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: background-color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            background-color: #45a049;
-            border-radius: 5px;
-        }
-
-        /* Add some space from the top after the fixed nav */
-        .content {
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        p {
-            font-size: 18px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        /* Section styles */
-        #home {
-            background: url('https://source.unsplash.com/1600x900/?nature') no-repeat center center/cover;
-            color: white;
-            height: 500px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        #about, #services, #contact, #blog {
-            background-color: #f9f9f9;
-            padding: 60px 20px;
-        }
-
-        /* Footer styling */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 14px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                padding: 0;
-            }
-
-            nav ul li {
-                margin: 5px 0;
-            }
-
-            .content {
-                padding: 80px 20px;
-            }
-        }
-    </style>
+    <title>De'Sim - Luxury Beauty Services</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>De'Sim</h1>
+        <p>Book luxury beauty services, direct to your door</p>
+        <p>Available in London, Manchester, Surrey, and The Cotswolds</p>
+        <div class="rating">
+            <span>⭐️⭐️⭐️⭐️⭐️ Rated 4.8 on the app store</span>
+        </div>
+    </header>
 
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#blog">Blog</a></li>
-        </ul>
-    </nav>
+    <section class="booking-section">
+        <form class="booking-form">
+            <label for="treatment">Choose Treatment</label>
+            <select id="treatment">
+                <option value="massage">Massage</option>
+                <option value="hair">Hair</option>
+                <option value="nails">Nails</option>
+                <option value="tanning">Tanning</option>
+                <option value="makeup">Makeup</option>
+                <option value="facial">Facial</option>
+                <option value="waxing">Waxing</option>
+                <option value="eyes">Eyes</option>
+                <option value="wellness">Wellness</option>
+            </select>
 
-    <!-- Main Content -->
-    <div class="content" id="home">
-        <h1>Welcome to Our Website</h1>
-        <p>This is the home section. Explore our website for more details.</p>
-    </div>
+            <label for="postcode">Postcode</label>
+            <input type="text" id="postcode" placeholder="Enter postcode">
 
-    <div class="content" id="about">
-        <h1>About Us</h1>
-        <p>We are a company dedicated to providing the best services to our customers. Our team is focused on innovation and excellence in everything we do.</p>
-    </div>
+            <label for="date">Choose Date</label>
+            <input type="date" id="date">
 
-    <div class="content" id="services">
-        <h1>Our Services</h1>
-        <p>We offer a range of services to meet your needs, including web development, design, consulting, and more.</p>
-    </div>
+            <button type="button" onclick="bookNow()">BOOK NOW</button>
+        </form>
+    </section>
 
-    <div class="content" id="contact">
-        <h1>Contact Us</h1>
-        <p>If you have any questions, feel free to contact us via email or phone. We are here to assist you!</p>
-    </div>
-
-    <div class="content" id="blog">
-        <h1>Our Blog</h1>
-        <p>Check out our latest blog posts for insights and updates on industry trends, tips, and more.</p>
-    </div>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Company. All rights reserved.</p>
+        <p>&copy; 2024 De'Sim - All rights reserved.</p>
     </footer>
 
+    <script>
+        function bookNow() {
+            const treatment = document.getElementById("treatment").value;
+            const postcode = document.getElementById("postcode").value;
+            const date = document.getElementById("date").value;
+
+            if (!treatment || !postcode || !date) {
+                alert("Please fill in all fields.");
+            } else {
+                alert(`Booking confirmed for ${treatment} on ${date} at ${postcode}`);
+            }
+        }
+    </script>
 </body>
 </html>
