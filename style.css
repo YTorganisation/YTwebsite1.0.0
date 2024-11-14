@@ -1,4 +1,63 @@
-/* Base Styling for Scroll Sections */
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body and Background Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #ffffff;
+    color: #333;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 5px;
+    color: #555;
+}
+
+.rating span {
+    font-size: 1.5rem;
+    color: gold;
+}
+
+/* Booking Section */
+.booking-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+/* Continuous Scroll Section */
 .scroll-section {
     display: flex;
     justify-content: center;
@@ -6,54 +65,49 @@
     padding: 40px 20px;
     background: #ffffff;
     width: 100%;
+    border-bottom: 1px solid #e0e0e0;
 }
 
+/* Image-Text Container for Alternating Layout */
 .image-text-container {
     display: flex;
     align-items: center;
     max-width: 900px;
     width: 100%;
-    position: relative;
 }
 
-/* Left Section (Image on Left) */
 .scroll-section.left .image-text-container {
     flex-direction: row;
 }
 
-.scroll-section.left .fade-image {
-    border-radius: 8px 0 0 8px;
-}
-
-/* Right Section (Image on Right) */
 .scroll-section.right .image-text-container {
     flex-direction: row-reverse;
 }
 
-.scroll-section.right .fade-image {
-    border-radius: 0 8px 8px 0;
-}
-
-/* Image Styling with Fade Effect */
-.fade-image {
+/* Fade Container for Image Effect */
+.fade-container {
     width: 50%;
     max-width: 450px;
-    object-fit: cover;
-    opacity: 0.9;
+    overflow: hidden;
+    position: relative;
 }
 
-.fade-image::after {
+.fade-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.fade-container::after {
     content: "";
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
+    bottom: 0;
+    width: 100%;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
-.scroll-section.right .fade-image::after {
-    left: 0;
+.scroll-section.right .fade-container::after {
     background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
@@ -75,8 +129,9 @@
     color: #555;
 }
 
-/* Section Divider Styling */
-.scroll-section + .scroll-section {
-    border-top: 2px solid #e0e0e0;
-    margin-top: 40px;
+/* Footer Styling */
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
 }
