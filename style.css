@@ -1,108 +1,60 @@
-/* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Body and Background Styling */
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    background: #ffffff;/*radial-gradient(circle, #A0E7E5, #88DDD9, #5CCCCC); /* Tiffany color circular gradient */
-    color: #333;
-    text-align: center;
-}
-
-/* Header Styling */
-header {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 8px;
-}
-
-header p {
-    font-size: 1.1rem;
-    margin-top: 5px;
-    color: #555;
-}
-
-.rating span {
-    font-size: 1.5rem;
-    color: gold;
-}
-
-/* Booking Section */
-.booking-section {
+/* Continuous Scroll Section Styling */
+.scroll-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    max-width: 500px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.7); /* Light transparency */
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
-    backdrop-filter: blur(8px); /* More blur for a smooth glassy effect */
-}
-
-/* Booking Form Styling */
-.booking-form {
+    padding: 40px 20px;
+    background: #ffffff;
     width: 100%;
+}
+
+.image-text-container {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Image Styling with Fade Effect */
+.fade-image {
+    width: 50%;
+    max-width: 450px;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+    opacity: 0.9;
+}
+
+/* Fade-out Effect Overlay */
+.fade-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+/* Text Content Styling */
+.text-content {
+    padding: 20px;
+    width: 50%;
     text-align: left;
 }
 
-.booking-form label {
+.text-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #5CCCCC;
+}
+
+.text-content p {
     font-size: 1rem;
     color: #555;
-    margin-top: 10px;
-    display: block;
 }
 
-.booking-form select,
-.booking-form input[type="text"],
-.booking-form input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    background: rgba(255, 255, 255, 0.9); /* Slightly transparent input background */
-    color: #333;
-}
-
-.booking-form button {
-    width: 100%;
-    padding: 12px;
-    font-size: 1.1rem;
-    color: #fff;
-    background: #5CCCCC;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.booking-form button:hover {
-    background: #3DB5B3;
-}
-
-/* Footer Styling */
-footer {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #666;
+/* Section Divider Styling */
+.scroll-section + .scroll-section {
+    border-top: 2px solid #e0e0e0;
+    margin-top: 40px;
 }
