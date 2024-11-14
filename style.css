@@ -44,13 +44,14 @@ header p {
 }
 
 /* Booking Section */
+/* Booking Section */
 .booking-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 600px;
-    padding: 30px;
+    width: 90%;
+    max-width: 700px;
+    padding: 40px;
     margin: 40px 0; /* Add more space around the booking section */
     background: rgba(255, 255, 255, 0.85); /* Slight transparency */
     border-radius: 15px;
@@ -60,39 +61,47 @@ header p {
 
 /* Booking Form Styling */
 .booking-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     width: 100%;
     text-align: left;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .booking-form label {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #333;
-    margin-top: 15px;
-    display: block;
+    width: 100%;
+    text-align: center;
 }
 
+/* Styling for Inputs and Selects */
 .booking-form select,
 .booking-form input[type="text"],
 .booking-form input[type="date"] {
-    width: 100%;
-    padding: 15px; /* Increase padding for larger input fields */
+    flex: 1;
+    padding: 15px;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1.1rem; /* Larger font for input text */
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency */
     color: #333;
+    max-width: calc(33% - 20px); /* Make each input box occupy a third of the form width */
 }
 
+/* Styling for the Submit Button */
 .booking-form button {
     width: 100%;
     padding: 15px; /* Larger button */
-    font-size: 1.2rem; /* Increase button text size */
+    font-size: 1.3rem; /* Increase button text size */
     color: #fff;
     background: #5CCCCC;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
@@ -100,6 +109,7 @@ header p {
 .booking-form button:hover {
     background: #3DB5B3;
 }
+
 
 
 /* Continuous Scroll Section */
