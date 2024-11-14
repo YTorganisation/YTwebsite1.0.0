@@ -48,14 +48,59 @@ header p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    max-width: 500px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(8px);
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    margin: 40px 0; /* Add more space around the booking section */
+    background: rgba(255, 255, 255, 0.85); /* Slight transparency */
+    border-radius: 15px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2); /* Deeper shadow for more emphasis */
+    backdrop-filter: blur(10px);
 }
+
+/* Booking Form Styling */
+.booking-form {
+    width: 100%;
+    text-align: left;
+}
+
+.booking-form label {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 15px;
+    display: block;
+}
+
+.booking-form select,
+.booking-form input[type="text"],
+.booking-form input[type="date"] {
+    width: 100%;
+    padding: 15px; /* Increase padding for larger input fields */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.1rem; /* Larger font for input text */
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+}
+
+.booking-form button {
+    width: 100%;
+    padding: 15px; /* Larger button */
+    font-size: 1.2rem; /* Increase button text size */
+    color: #fff;
+    background: #5CCCCC;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.booking-form button:hover {
+    background: #3DB5B3;
+}
+
 
 /* Continuous Scroll Section */
 .scroll-section {
