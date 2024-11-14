@@ -14,7 +14,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    background: radial-gradient(circle, #A0E7E5, #88DDD9, #5CCCCC); /* Tiffany color circular gradient */
+    background: #ffffff;/*radial-gradient(circle, #A0E7E5, #88DDD9, #5CCCCC); /* Tiffany color circular gradient */
     color: #333;
     text-align: center;
 }
