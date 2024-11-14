@@ -1,4 +1,4 @@
-/* Continuous Scroll Section Styling */
+/* Base Styling for Scroll Sections */
 .scroll-section {
     display: flex;
     justify-content: center;
@@ -13,6 +13,25 @@
     align-items: center;
     max-width: 900px;
     width: 100%;
+    position: relative;
+}
+
+/* Left Section (Image on Left) */
+.scroll-section.left .image-text-container {
+    flex-direction: row;
+}
+
+.scroll-section.left .fade-image {
+    border-radius: 8px 0 0 8px;
+}
+
+/* Right Section (Image on Right) */
+.scroll-section.right .image-text-container {
+    flex-direction: row-reverse;
+}
+
+.scroll-section.right .fade-image {
+    border-radius: 0 8px 8px 0;
 }
 
 /* Image Styling with Fade Effect */
@@ -20,11 +39,9 @@
     width: 50%;
     max-width: 450px;
     object-fit: cover;
-    border-radius: 8px 0 0 8px;
     opacity: 0.9;
 }
 
-/* Fade-out Effect Overlay */
 .fade-image::after {
     content: "";
     position: absolute;
@@ -33,6 +50,11 @@
     width: 50%;
     height: 100%;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.scroll-section.right .fade-image::after {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 }
 
 /* Text Content Styling */
